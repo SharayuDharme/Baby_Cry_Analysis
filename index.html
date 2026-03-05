@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CryDecode Crew — Baby Cry Analysis</title>
+
+<!-- Bootstrap & Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+<style>
+  :root{
+    --purple-1:#6a11cb;
+    --purple-2:#a944ec;
+    --accent:#6a11cb;
+    --soft:#f8f4ff;
+  }
+  body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background:#fff; color:#222;}
+  .topbar{background:linear-gradient(90deg,var(--purple-1),var(--purple-2)); color:#fff;}
+  .brand-logo{display:flex;gap:10px;align-items:center;font-weight:700}
+  .brand-badge{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.15)}
+  .hero{background:linear-gradient(135deg, rgba(106,17,203,0.08), rgba(169,68,236,0.04)); padding:42px 0;}
+  .hero-card{border-radius:18px; padding:28px; background:linear-gradient(180deg,#fff,#fbf8ff); box-shadow:0 10px 30px rgba(106,17,203,0.06);}
+  .big-cta{background:linear-gradient(90deg,var(--purple-1),var(--purple-2)); color:#fff; border-radius:12px; padding:12px 22px;}
+  .btn-purple{background:var(--accent); color:#fff; border-radius:10px;}
+  .card-soft{background:var(--soft); border-radius:14px; border:1px solid rgba(106,17,203,0.06);}
+  .icon-circle{background:linear-gradient(90deg,#fff,rgba(255,255,255,0.6));border-radius:12px;padding:12px;display:inline-flex;align-items:center;justify-content:center;}
+  footer{background:linear-gradient(90deg,var(--purple-1),var(--purple-2)); color:#fff; padding:18px 0; margin-top:36px;}
+  @media (max-width:767px){ .brand-text{font-size:18px} }
+</style>
+</head>
+<body>
+
+<!-- HEADER / NAV -->
+<nav class="topbar py-3">
+  <div class="container d-flex align-items-center justify-content-between">
+    <div class="brand-logo">
+      <div class="brand-badge">
+        <i class="fa-solid fa-baby fa-lg"></i>
+      </div>
+      <div>
+        <div class="brand-text" style="font-size:22px">CryDecode Crew</div>
+        <small style="opacity:.9">Decode baby cries • AI + Wisdom</small>
+      </div>
+    </div>
+    <div class="d-none d-md-flex gap-3 align-items-center">
+      <a class="text-white text-decoration-none" href="#how">How it works</a>
+      <a class="text-white text-decoration-none" href="#analysis">Analyze</a>
+      <a class="text-white text-decoration-none" href="#solutions">Solutions</a>
+      <a class="text-white text-decoration-none" href="#history">History</a>
+      <a class="text-white text-decoration-none" href="#tips">Parenting Tips</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-7">
+        <div class="hero-card">
+          <h1 class="mb-2" style="font-weight:800; color:var(--purple-1)">Baby cries, simplified.</h1>
+          <p class="mb-3 text-muted">Upload or record your baby’s cry and get instant guidance — reason detection (hungry, sleepy, pain, burping, hot/cold, tired, discomfort) and modern/traditional solutions you can try now.</p>
+          <div class="d-flex gap-2 flex-wrap">
+            <a class="big-cta text-decoration-none" href="#analysis"><i class="fa-solid fa-microphone"></i> Start Analysis</a>
+            <a class="btn btn-outline-secondary" href="#profile" style="border-radius:10px">Create Profile</a>
+          </div>
+          <div class="row mt-4">
+            <div class="col-sm-4">
+              <div class="card-soft p-3">
+                <div class="d-flex gap-3 align-items-start">
+                  <div class="icon-circle me-2"><i class="fa-solid fa-robot text-purple-1"></i></div>
+                  <div>
+                    <strong>AI-driven</strong>
+                    <div class="small text-muted">Fast, demo-ready analysis</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card-soft p-3">
+                <div class="d-flex gap-3 align-items-start">
+                  <div class="icon-circle me-2"><i class="fa-solid fa-heart text-purple-1"></i></div>
+                  <div>
+                    <strong>Parent friendly</strong>
+                    <div class="small text-muted">Clear reasons & step-by-step solutions</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card-soft p-3">
+                <div class="d-flex gap-3 align-items-start">
+                  <div class="icon-circle me-2"><i class="fa-solid fa-clock-rotate-left text-purple-1"></i></div>
+                  <div>
+                    <strong>History</strong>
+                    <div class="small text-muted">Track past analyses</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- row -->
+        </div> <!-- hero-card -->
+      </div>
+      <div class="col-lg-5">
+        <div class="card p-3 text-center" style="border-radius:18px; box-shadow:0 18px 40px rgba(106,17,203,0.08)">
+          <img src="avtar4.jpg" alt="phone mock" style="max-width:300px;">
+          <p class="mt-3 mb-0"><small class="text-muted">“Crying is just their way of saying ‘I need you.’” 🤱💗</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN SINGLE-PAGE CONTENT -->
+<div class="container my-5">
+  <!-- PROFILE FORM -->
+  <div id="profile" class="mb-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h3 class="text-purple-1">Baby Profile</h3>
+      <div id="profileTop" class="text-end"></div>
+    </div>
+    <div class="card p-3">
+      <form id="profileForm" class="row g-3">
+        <div class="col-md-4"><label class="form-label">Baby name</label><input id="babyName" class="form-control" placeholder="e.g. Aanya" required></div>
+        <div class="col-md-3"><label class="form-label">DOB</label><input id="babyDob" type="date" class="form-control" required></div>
+        <div class="col-md-3"><label class="form-label">Parent name</label><input id="parentName" class="form-control" placeholder="Your name" required></div>
+        <div class="col-md-2 d-flex align-items-end"><button class="btn btn-purple w-100" type="submit"><i class="fa-solid fa-save"></i> Save</button></div>
+      </form>
+      <div id="profileCard" class="mt-3 p-3 d-none" style="border-radius:12px; background:#fbf7ff;">
+        <strong id="pName"></strong><br>
+        <small id="pDob" class="text-muted"></small><br>
+        <small id="pParent" class="text-muted"></small>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANALYSIS -->
+  <div id="analysis" class="mb-5">
+    <h3 class="text-purple-1 mb-3">Cry Analysis</h3>
+    <div class="card p-3">
+      <div class="row g-3 align-items-center">
+        <div class="col-md-4"><label class="form-label">Upload audio (wav, mp3)</label><input id="fileInput" type="file" accept="audio/*" class="form-control"></div>
+        <div class="col-md-4">
+          <label class="form-label">Or record live</label>
+          <div class="d-flex gap-2">
+            <button id="startRec" class="btn btn-purple"><i class="fa-solid fa-microphone"></i> Record</button>
+            <button id="stopRec" class="btn btn-danger d-none"><i class="fa-solid fa-stop"></i> Stop</button>
+            <button id="playRec" class="btn btn-outline-secondary d-none"><i class="fa-solid fa-play"></i> Play</button>
+          </div>
+          <div class="mt-2 small text-muted" id="recStatus"></div>
+        </div>
+        <div class="col-md-4 d-flex align-items-end"><button id="analyzeBtn" class="btn btn-success w-100"><i class="fa-solid fa-magnifying-glass"></i> Analyze Cry</button></div>
+      </div>
+      <div class="mt-3" id="audioWrap"></div>
+
+      <!-- result -->
+      <div id="resultPanel" class="mt-4 d-none">
+        <div class="card p-3">
+          <h5 class="text-purple-1"><i class="fa-solid fa-chart-pie"></i> Result</h5>
+          <p class="mb-1"><strong>Reason:</strong> <span id="predReason"></span></p>
+          <p class="mb-1"><strong>Confidence:</strong> <span id="predConf"></span></p>
+          <ul class="nav nav-tabs mt-3" id="solTabs" role="tablist">
+            <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#modern" type="button">Modern (10)</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#traditional" type="button">Traditional (10)</button></li>
+          </ul>
+          <div class="tab-content mt-3">
+            <div class="tab-pane fade show active" id="modern"><ol id="modernSolutions"></ol></div>
+            <div class="tab-pane fade" id="traditional"><ol id="traditionalSolutions"></ol></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HISTORY -->
+  <div id="history" class="mb-5">
+    <h3 class="text-purple-1">Analysis History</h3>
+    <div class="card p-3">
+      <div id="historyList"></div>
+      <div class="mt-2 text-end"><button id="clearHistory" class="btn btn-outline-danger btn-sm">Clear History</button></div>
+    </div>
+  </div>
+</div>
+
+<footer class="text-center">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-start"><strong>CryDecode Crew</strong><br><small>AI + Parenting Wisdom</small></div>
+      <div class="col-md-6 text-end"><small>© 2025 CryDecode Crew — Built for demos.</small></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+/* ====== Storage Keys ====== */
+const KEY_PROFILE = "cry_profile_v1";
+const KEY_HISTORY = "cry_history_v1";
+
+/* ====== Elements ====== */
+const startBtn=document.getElementById("startRec");
+const stopBtn=document.getElementById("stopRec");
+const playBtn=document.getElementById("playRec");
+const recStatus=document.getElementById("recStatus");
+const audioWrap=document.getElementById("audioWrap");
+const fileInput=document.getElementById("fileInput");
+const analyzeBtn=document.getElementById("analyzeBtn");
+
+/* ====== Profile ====== */
+function loadProfileUI(){
+  const prof=JSON.parse(localStorage.getItem(KEY_PROFILE));
+  if(prof){
+    document.getElementById("profileCard").classList.remove("d-none");
+    document.getElementById("pName").innerText=prof.name;
+    document.getElementById("pDob").innerText="DOB: "+prof.dob;
+    document.getElementById("pParent").innerText="Parent: "+prof.parent;
+    document.getElementById("profileTop").innerHTML=`<small style="color:#fff; opacity:.9">👶 ${prof.name}</small>`;
+    document.getElementById("profileForm").classList.add("d-none");
+  }
+}
+document.getElementById("profileForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  const name=document.getElementById("babyName").value.trim();
+  const dob=document.getElementById("babyDob").value;
+  const parent=document.getElementById("parentName").value.trim();
+  if(!name||!dob||!parent)return alert("Please fill all profile fields.");
+  localStorage.setItem(KEY_PROFILE,JSON.stringify({name,dob,parent}));
+  loadProfileUI();
+});
+loadProfileUI();
+
+/* ====== Recording & Playback ====== */
+let mediaRecorder=null, recordedBlob=null, audioUrl=null, streamRef=null;
+
+startBtn.addEventListener("click", async()=>{
+  try{
+    const stream=await navigator.mediaDevices.getUserMedia({audio:true});
+    streamRef=stream;
+    mediaRecorder=new MediaRecorder(stream);
+    const chunks=[];
+    mediaRecorder.ondataavailable=e=>chunks.push(e.data);
+    mediaRecorder.onstop=()=>{
+      recordedBlob=new Blob(chunks,{type:"audio/webm"});
+      audioUrl=URL.createObjectURL(recordedBlob);
+      showPlayback(audioUrl);
+      stream.getTracks().forEach(t=>t.stop());
+    };
+    mediaRecorder.start();
+    recStatus.innerText="Recording... (max 30s or press Stop)";
+    startBtn.classList.add("d-none"); stopBtn.classList.remove("d-none"); playBtn.classList.add("d-none");
+    setTimeout(()=>{if(mediaRecorder&&mediaRecorder.state==='recording')mediaRecorder.stop();},30000);
+  }catch(err){alert("Microphone access required."); console.error(err);}
+});
+
+stopBtn.addEventListener("click", ()=>{
+  if(mediaRecorder&&mediaRecorder.state==='recording')mediaRecorder.stop();
+  recStatus.innerText="Recording stopped.";
+  startBtn.classList.remove("d-none"); stopBtn.classList.add("d-none"); playBtn.classList.remove("d-none");
+});
+
+playBtn.addEventListener("click", ()=>{
+  if(audioUrl){
+    showPlayback(audioUrl);
+  }else alert("No recording available.");
+});
+
+fileInput.addEventListener("change",function(){
+  const f=this.files[0]; if(!f)return;
+  recordedBlob=f; audioUrl=URL.createObjectURL(f);
+  showPlayback(audioUrl); recStatus.innerText="File selected: "+(f.name||'uploaded audio');
+  startBtn.classList.remove("d-none"); stopBtn.classList.add("d-none"); playBtn.classList.remove("d-none");
+});
+
+function showPlayback(url){
+  audioWrap.innerHTML='';
+  const a=document.createElement("audio"); a.controls=true; a.src=url; a.style.width='100%';
+  audioWrap.appendChild(a); document.getElementById("playRec").classList.remove("d-none");
+}
+
+/* ====== History ====== */
+function pushHistory(entry){
+  const history=JSON.parse(localStorage.getItem(KEY_HISTORY)||"[]");
+  history.unshift(entry);
+  localStorage.setItem(KEY_HISTORY,JSON.stringify(history));
+  renderHistory();
+}
+function renderHistory(){
+  const histWrap=document.getElementById("historyList");
+  const history=JSON.parse(localStorage.getItem(KEY_HISTORY)||"[]");
+  if(history.length===0){ histWrap.innerHTML="<div class='text-muted'>No analyses yet.</div>"; return; }
+  histWrap.innerHTML="";
+  history.forEach(item=>{
+    const card=document.createElement("div");
+    card.className="p-3 mb-2"; card.style.borderBottom="1px dashed #eee";
+    card.innerHTML=`<div class="d-flex justify-content-between"><div>
+      <strong>${item.reason}</strong>
+      <div class="small text-muted">Profile: ${item.profile||'—'}</div>
+      <div class="small text-muted">Confidence: ${Math.round(item.conf*100)}%</div>
+      </div>
+      <div class="small text-muted">${item.at}</div></div>`;
+    histWrap.appendChild(card);
+  });
+}
+document.getElementById("clearHistory").addEventListener("click",()=>{
+  if(confirm("Clear all history?")){ localStorage.removeItem(KEY_HISTORY); renderHistory(); }
+});
+renderHistory();
+
+/* ====== Analyze Button ====== */
+analyzeBtn.addEventListener("click",async()=>{
+  if(!recordedBlob)return alert("Please record or upload an audio file first.");
+  const prof=JSON.parse(localStorage.getItem(KEY_PROFILE))||{};
+  const fd=new FormData(); fd.append("file",recordedBlob);
+  analyzeBtn.innerText="Analyzing..."; analyzeBtn.disabled=true;
+  try{
+    const resp=await fetch("/analyze", {method:"POST", body:fd});
+    if(!resp.ok)throw new Error("Server error");
+    const data=await resp.json(); // {reason, confidence, modern, traditional}
+    document.getElementById("predReason").innerText=data.reason;
+    document.getElementById("predConf").innerText=(data.confidence*100).toFixed(1)+"%";
+
+    const modernList=document.getElementById("modernSolutions"); modernList.innerHTML="";
+    const tradList=document.getElementById("traditionalSolutions"); tradList.innerHTML="";
+    data.modern.forEach(s=>{ const li=document.createElement("li"); li.innerText=s; modernList.appendChild(li); });
+    data.traditional.forEach(s=>{ const li=document.createElement("li"); li.innerText=s; tradList.appendChild(li); });
+
+    document.getElementById("resultPanel").classList.remove("d-none");
+
+    pushHistory({reason:data.reason,conf:data.confidence,profile:prof.name,at:new Date().toLocaleString()});
+  }catch(err){alert("Error analyzing: "+err);}
+  finally{analyzeBtn.innerHTML='<i class="fa-solid fa-magnifying-glass"></i> Analyze Cry'; analyzeBtn.disabled=false;}
+});
+</script>
+
+</body>
+</html>
